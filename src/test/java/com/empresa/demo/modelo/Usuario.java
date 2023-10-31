@@ -9,12 +9,12 @@ import jakarta.persistence.Table;
 //Librerias
 
 @Entity
-@Table(name="usuarios")
+@Table(name="usuario")
 
 public class Usuario {
     //Atributos del usuario
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) // Esto con el fin de poder realizar de manera automatica la asignacion de un ID
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Esto con el fin de poder realizar de manera automatica la asignacion de un ID
     private int id; 
     private String nombre; 
     private String apellido; 
@@ -25,6 +25,7 @@ public class Usuario {
     //Generacion del Metodo constructor
 
     public Usuario(String nombre, String apellido, String direccion, String correo, int cedula){
+        super();
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
