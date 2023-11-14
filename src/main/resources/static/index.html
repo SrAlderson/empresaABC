@@ -5,12 +5,39 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilos.css'>
     <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
 </head>
 <body>
-    <h1> Funcionamiento de Spring Boot - Ingenieria de software</h1>
-    <h2> Funcionamiento Github desde VSCode </h2>
-
+        <form>
+            <h2>Empresa ABC</h2>
+            <h2>Bienvenido</h2>
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+    
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <button type="button" onclick="validarCredenciales()">Iniciar Sesión</button>
+            <button type="button" onclick="">Registrarse</button>
+        </form>
+    <script>
+        function validarCredenciales() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+    
+            // Aquí podrías realizar la validación con un servidor
+            // En este ejemplo, simplemente comparamos con credenciales estáticas
+            if (username === "usuario" && password === "contraseña") {
+                // Redirigir a la página de bienvenida
+                window.location.href = "welcome.html";
+            } else {
+                alert("Credenciales incorrectas. Inténtalo de nuevo.");
+            }
+        }
+    </script>    
 </body>
 </html>
